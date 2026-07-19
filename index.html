@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viana Food</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#ff5722;
+color:#fff;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+header h1{
+font-size:28px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:18px;
+font-weight:bold;
+}
+
+.hero{
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:12px 30px;
+background:#ffc107;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+.container{
+width:92%;
+margin:auto;
+padding:30px 0;
+}
+
+.judul{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.info{
+padding:15px;
+}
+
+.info h3{
+margin-bottom:10px;
+}
+
+.harga{
+color:#ff5722;
+font-size:22px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.qty{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+margin-bottom:15px;
+}
+
+.qty button{
+width:35px;
+height:35px;
+border:none;
+border-radius:50%;
+font-size:20px;
+background:#ff5722;
+color:white;
+cursor:pointer;
+}
+
+.qty span{
+font-size:20px;
+font-weight:bold;
+width:40px;
+text-align:center;
+}
+
+.btn{
+width:100%;
+padding:12px;
+background:#28a745;
+border:none;
+color:white;
+border-radius:8px;
+font-size:17px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>🍔 Viana Food</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#kontak">Kontak</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h2>Selamat Datang</h2>
+
+<p>Pesan makanan favoritmu dengan mudah.</p>
+
+<button>LiHAT MENU</button>
+
+</div>
+
+</section>
+
+<div class="container" id="menu">
+
+<h2 class="judul">Menu Makanan</h2>
+
+<div class="menu">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
+
+<div class="info">
+
+<h3>Nasi Goreng</h3>
+
+<div class="harga">Rp20.000</div>
+
+<div class="qty">
+
+<button onclick="kurang('nasgor')">-</button>
+
+<span id="nasgor">0</span>
+
+<button onclick="tambah('nasgor')">+</button>
+
+</div>
+
+<button class="btn" onclick="pesan('Nasi Goreng',20000,'nasgor')">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+
+<div class="info">
+
+<h3>Burger</h3>
+
+<div class="harga">Rp25.000</div>
+
+<div class="qty">
+
+<button onclick="kurang('burger')">-</button>
+
+<span id="burger">0</span>
+
+<button onclick="tambah('burger')">+</button>
+
+</div>
+
+<button class="btn" onclick="pesan('Burger',25000,'burger')">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624">
+
+<div class="info">
+
+<h3>Ayam Geprek</h3>
+
+<div class="harga">Rp22.000</div>
+
+<div class="qty">
+
+<button onclick="kurang('geprek')">-</button>
+
+<span id="geprek">0</span>
+
+<button onclick="tambah('geprek')">+</button>
+
+</div>
+
+<button class="btn" onclick="pesan('Ayam Geprek',22000,'geprek')">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb">
+
+<div class="info">
+
+<h3>Mie Ayam</h3>
+
+<div class="harga">Rp18.000</div>
+
+<div class="qty">
+
+<button onclick="kurang('mie')">-</button>
+
+<span id="mie">0</span>
+
+<button onclick="tambah('mie')">+</button>
+
+</div>
+
+<button class="btn" onclick="pesan('Mie Ayam',18000,'mie')">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd">
+
+<div class="info">
+
+<h3>Pizza</h3>
+
+<div class="harga">Rp55.000</div>
+
+<div class="qty">
+
+<button onclick="kurang('pizza')">-</button>
+
+<span id="pizza">0</span>
+
+<button onclick="tambah('pizza')">+</button>
+
+</div>
+
+<button class="btn" onclick="pesan('Pizza',55000,'pizza')">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e">
+
+<div class="info">
+
+<h3>Es Teh Manis</h3>
+
+<div class="harga">Rp5.000</div>
+
+<div class="qty">
+
+<button onclick="kurang('esteh')">-</button>
+
+<span id="esteh">0</span>
+
+<button onclick="tambah('esteh')">+</button>
+
+</div>
+
+<button class="btn" onclick="pesan('Es Teh Manis',5000,'esteh')">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1544145945-f90425340c7e">
+
+<div class="info">
+
+<h3>Jus Jeruk</h3>
+
+<div class="harga">Rp10.000</div>
+
+<div class="qty">
+
+<button onclick="kurang('jus')">-</button>
+
+<span id="jus">0</span>
+
+<button onclick="tambah('jus')">+</button>
+
+</div>
+
+<button class="btn" onclick="pesan('Jus Jeruk',10000,'jus')">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<h2 style="margin-top:40px;">🛒 Keranjang Belanja</h2>
+
+<div id="keranjang" style="
+background:#fff;
+padding:20px;
+margin-top:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<p>Belum ada pesanan.</p>
+
+</div>
+
+<h2 id="total" style="margin-top:20px;color:#ff5722;">
+Total : Rp0
+</h2>
+
+<h3 style="margin-top:25px;">Catatan Pesanan</h3>
+
+<textarea id="catatan"
+placeholder="Contoh: Pedas, tanpa bawang, sedikit es..."
+style="
+width:100%;
+height:100px;
+margin-top:10px;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+resize:none;
+"></textarea>
+
+<button onclick="checkout()"
+style="
+margin-top:20px;
+width:100%;
+padding:15px;
+font-size:18px;
+background:#25D366;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;">
+Checkout via WhatsApp
+</button>
+
+</div>
+
+<footer id="kontak" style="
+margin-top:50px;
+background:#222;
+color:white;
+text-align:center;
+padding:20px;">
+<h3>Donn Food</h3>
+<p>Terima kasih telah berbelanja.</p>
+</footer>
+<script>
+
+let keranjang = [];
+let total = 0;
+
+const nomorWA = "62881011268398"; // Ganti dengan nomor WhatsApp Anda
+
+function rupiah(angka){
+    return "Rp" + angka.toLocaleString("id-ID");
+}
+
+function tambah(id){
+    let el = document.getElementById(id);
+    let jumlah = parseInt(el.innerText);
+    jumlah++;
+    el.innerText = jumlah;
+}
+
+function kurang(id){
+    let el = document.getElementById(id);
+    let jumlah = parseInt(el.innerText);
+
+    if(jumlah > 0){
+        jumlah--;
+    }
+
+    el.innerText = jumlah;
+}
+
+function pesan(nama,harga,id){
+
+    let jumlah = parseInt(document.getElementById(id).innerText);
+
+    if(jumlah == 0){
+        alert("Silakan pilih jumlah terlebih dahulu.");
+        return;
+    }
+
+    keranjang.push({
+        nama:nama,
+        harga:harga,
+        jumlah:jumlah
+    });
+    document.getElementById(id).innerText = "0";
+
+    tampilkanKeranjang();
+}
+function tampilkanKeranjang(){
+
+    let html = "";
+    total = 0;
+
+    if(keranjang.length == 0){
+        html = "<p>Belum ada pesanan.</p>";
+    }else{
+
+        keranjang.forEach((item,index)=>{
+
+            let subtotal = item.harga * item.jumlah;
+            total += subtotal;
+
+            html += `
+            <div style="border-bottom:1px solid #ddd;padding:15px 0;">
+
+                <b>${item.nama}</b>
+
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+
+                    <div>
+
+                        <button onclick="kurangKeranjang(${index})">➖</button>
+
+                        <span style="margin:0 10px;">${item.jumlah}</span>
+
+                        <button onclick="tambahKeranjang(${index})">➕</button>
+
+                    </div>
+
+                    <b>${rupiah(subtotal)}</b>
+
+                </div>
+
+                <button onclick="hapusItem(${index})"
+                style="margin-top:10px;background:red;color:white;border:none;padding:8px 15px;border-radius:5px;">
+                ❌ Batal
+                </button>
+
+            </div>
+            `;
+
+        });
+
+    }
+
+    document.getElementById("keranjang").innerHTML = html;
+    document.getElementById("total").innerHTML = "Total : " + rupiah(total);
+
+}
+function tambahKeranjang(index){
+    keranjang[index].jumlah++;
+    tampilkanKeranjang();
+}
+
+function kurangKeranjang(index){
+    keranjang[index].jumlah--;
+
+    if(keranjang[index].jumlah <= 0){
+        keranjang.splice(index,1);
+    }
+
+    tampilkanKeranjang();
+}
+function hapusItem(index){
+    keranjang.splice(index,1);
+    tampilkanKeranjang();
+}
+
+function checkout(){
+
+    if(keranjang.length == 0){
+        alert("Keranjang masih kosong!");
+        return;
+    }
+
+    let catatan = document.getElementById("catatan").value;
+
+    let pesanWA = "Halo Donn Food,%0A%0ASaya ingin memesan:%0A%0A";
+
+    keranjang.forEach(function(item,index){
+
+        let subtotal = item.harga * item.jumlah;
+
+        pesanWA +=
+        (index+1)+". "+
+        item.nama+
+        " x"+item.jumlah+
+        " = "+
+        rupiah(subtotal)+
+        "%0A";
+
+    });
+
+    pesanWA += "%0A";
+    pesanWA += "Total : " + rupiah(total) + "%0A";
+
+    if(catatan != ""){
+        pesanWA += "Catatan : " + catatan + "%0A";
+    }
+
+    window.open(
+        "https://wa.me/"+nomorWA+"?text="+encodeURIComponent(decodeURIComponent(pesanWA)),
+        "_blank"
+    );
+
+}
+
+// Mengosongkan jumlah setelah halaman dimuat
+window.onload = function(){
+
+    const idMenu = [
+        "nasgor",
+        "burger",
+        "geprek",
+        "mie",
+        "pizza",
+        "esteh",
+        "jus"
+    ];
+
+    idMenu.forEach(function(id){
+        let el = document.getElementById(id);
+        if(el){
+            el.innerText = "0";
+        }
+    });
+
+};
+
+</script>
+
+</body>
+</html>
