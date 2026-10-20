@@ -6,102 +6,100 @@
 <meta name="theme-color" content="#f45b32">
 <meta name="description" content="Viana Food — pesan risol favorit dengan mudah.">
 <title>Viana Food | Pesan Risol Favorit</title>
+
+<link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="https://raw.githubusercontent.com/websiteku-id/Foodsviana/main/Poster.png" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root{--orange:#f45b32;--orange-dark:#d94320;--yellow:#ffd166;--green:#159447;--green-dark:#08752f;--ink:#292522;--muted:#756d68;--cream:#fff8f2;--white:#fff;--shadow:0 12px 32px rgba(69,43,27,.10)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;color:var(--ink);background:var(--cream);font-family:'Poppins',Arial,sans-serif}
-button,input,textarea{font:inherit}button{touch-action:manipulation;cursor:pointer}
+button,input,textarea{font:inherit}
+button{touch-action:manipulation;cursor:pointer}
 header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(16px,4vw,48px);background:#FFE58A;border-bottom:1px solid rgba(112,68,20,.16);box-shadow:0 4px 18px rgba(112,68,20,.10)}
 .brand{color:var(--orange);text-decoration:none;font-family:'Pacifico','Brush Script MT',cursive;font-size:clamp(25px,4vw,37px);line-height:1.3;white-space:nowrap;text-shadow:1px 2px 0 rgba(255,255,255,.65)}
-nav{display:flex;align-items:center;gap:clamp(10px,2vw,24px)}nav a{color:#593016;text-decoration:none;font-size:14px;font-weight:700}
+nav{display:flex;align-items:center;gap:clamp(10px,2vw,24px)}
+nav a{color:#593016;text-decoration:none;font-size:14px;font-weight:700}
 .hero{min-height:330px;display:flex;align-items:center;padding:clamp(32px,7vw,76px) clamp(18px,7vw,90px);color:white;background:linear-gradient(90deg,rgba(39,20,11,.82),rgba(39,20,11,.35)),url("https://raw.githubusercontent.com/websiteku-id/Foodsviana/main/Poster.png") center/cover no-repeat,linear-gradient(135deg,#f45b32,#ffb15e)}
-.hero-content{max-width:650px}.eyebrow{display:inline-block;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.3);font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
-.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.13;margin:17px 0 12px}.hero h1 span{color:var(--yellow)}.hero p{font-size:clamp(14px,2vw,18px);line-height:1.8;margin:0 0 24px;max-width:520px}
+.hero-content{max-width:650px}
+.eyebrow{display:inline-block;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.3);font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.13;margin:17px 0 12px}
+.hero h1 span{color:var(--yellow)}
+.hero p{font-size:clamp(14px,2vw,18px);line-height:1.8;margin:0 0 24px;max-width:520px}
 .primary-link{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:12px;background:var(--yellow);color:#35251a;text-decoration:none;font-weight:800}
 .promo-strip{width:min(1120px,92%);margin:22px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .promo{display:flex;align-items:center;gap:12px;padding:15px 16px;background:#fff;border:1px solid #f5dfd2;border-radius:15px;box-shadow:0 7px 20px rgba(69,43,27,.06)}
 .promo-icon{flex:0 0 43px;width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#fff0e8;font-size:23px}
-.promo strong{display:block;font-size:13px;line-height:1.45}.promo span{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:3px}
-.container{width:min(1120px,92%);margin:0 auto;padding:48px 0}.section-head{text-align:center;margin-bottom:28px}.small-title{color:var(--orange);font-weight:800;letter-spacing:2px;font-size:12px;text-transform:uppercase}
-.section-head h2{font-size:clamp(26px,4vw,36px);margin:8px 0}.section-head p{margin:0;color:var(--muted);font-size:14px}
+.promo strong{display:block;font-size:13px;line-height:1.45}
+.promo span{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:3px}
+.container{width:min(1120px,92%);margin:0 auto;padding:48px 0}
+.section-head{text-align:center;margin-bottom:28px}
+.small-title{color:var(--orange);font-weight:800;letter-spacing:2px;font-size:12px;text-transform:uppercase}
+.section-head h2{font-size:clamp(26px,4vw,36px);margin:8px 0}
+.section-head p{margin:0;color:var(--muted);font-size:14px}
 .price-guide{max-width:720px;margin:0 auto 25px;background:#eaf8ee;border:1px solid #b9e5c5;border-radius:14px;padding:14px 16px;text-align:center;color:#185c2c;font-size:14px;line-height:1.7}
-.price-guide strong{color:var(--green-dark)}.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:22px}
+.price-guide strong{color:var(--green-dark)}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:22px}
 .card{min-width:0;background:var(--white);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(75,43,25,.06);transition:transform .2s ease,box-shadow .2s ease}
-.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(69,43,27,.14)}.image-wrap{height:190px;display:flex;align-items:center;justify-content:center;background:#fff1e8;overflow:hidden}
-.card img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  color: var(--muted);
-  font-size: 13px;
-  text-align: center;
-}
-
-.card img.mayo-img {
-  object-fit: contain;
-  object-position: center;
-  background: #fff;
-  padding: 0;
-}
-}.card img.image-failed{object-fit:contain;padding:25px;background:#fff1e8}.image-wrap{
-  height:190px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#fff1e8;
-  overflow:hidden;
-}
-
-.card img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center;
-  color:var(--muted);
-  font-size:13px;
-  text-align:center;
-}
-
-.card img.mayo-img{
-  object-fit:contain;
-  object-position:center;
-  background:#fff;
-  padding:0;
-}
-
-.card img.image-failed{
-  object-fit:contain;
-  padding:25px;
-  background:#fff1e8;
-}
-.info{padding:17px}.info h3{font-size:16px;line-height:1.5;min-height:48px;margin:0 0 9px}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(69,43,27,.14)}
+.image-wrap{height:190px;display:flex;align-items:center;justify-content:center;background:#fff1e8;overflow:hidden}
+.card img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;color:var(--muted);font-size:13px;text-align:center}
+.card img.mayo-img{object-fit:contain;object-position:center;background:#fff;padding:0}
+.card img.image-failed{object-fit:contain;padding:25px;background:#fff1e8}
+.info{padding:17px}
+.info h3{font-size:16px;line-height:1.5;min-height:48px;margin:0 0 9px}
 .harga{color:#000;font-size:21px;font-weight:800;margin-bottom:5px}
 .harga-keterangan{font-size:11px;color:var(--muted);margin-bottom:13px;min-height:17px}
 .qty{display:flex;justify-content:center;align-items:center;gap:16px;margin:0 0 15px}
 .qty button{width:38px;height:38px;border:0;border-radius:50%;background:var(--orange);color:#fff;font-size:22px;font-weight:700}
-.qty button:hover{background:var(--orange-dark)}.qty span{font-size:18px;font-weight:800;min-width:24px;text-align:center}
-.btn{width:100%;padding:12px;border:0;border-radius:10px;background:var(--green);color:white;font-size:14px;font-weight:700}.btn:hover,.checkout:hover{filter:brightness(.95)}
+.qty button:hover{background:var(--orange-dark)}
+.qty span{font-size:18px;font-weight:800;min-width:24px;text-align:center}
+.btn{width:100%;padding:12px;border:0;border-radius:10px;background:var(--green);color:white;font-size:14px;font-weight:700}
+.btn:hover,.checkout:hover{filter:brightness(.95)}
 .cart-panel{margin-top:48px;padding:clamp(18px,4vw,28px);background:#fff;border-radius:18px;box-shadow:var(--shadow)}
-.cart-panel h2{margin:0 0 8px;font-size:24px}.cart-intro{margin:0 0 12px;color:var(--muted);font-size:12px;line-height:1.6}
-.empty{padding:16px 0;color:var(--muted);text-align:center}.cart-item{border-bottom:1px solid #eee;padding:15px 0}.cart-item:last-child{border-bottom:0}
-.cart-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.cart-name{font-weight:700}.cart-subtotal{font-weight:800;color:var(--ink);white-space:nowrap}
-.cart-controls{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}.cart-controls button{border:0;border-radius:8px;padding:7px 11px;background:#fff0e9;color:var(--orange-dark);font-weight:700}
+.cart-panel h2{margin:0 0 8px;font-size:24px}
+.cart-intro{margin:0 0 12px;color:var(--muted);font-size:12px;line-height:1.6}
+.empty{padding:16px 0;color:var(--muted);text-align:center}
+.cart-item{border-bottom:1px solid #eee;padding:15px 0}
+.cart-item:last-child{border-bottom:0}
+.cart-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.cart-name{font-weight:700}
+.cart-subtotal{font-weight:800;color:var(--ink);white-space:nowrap}
+.cart-controls{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.cart-controls button{border:0;border-radius:8px;padding:7px 11px;background:#fff0e9;color:var(--orange-dark);font-weight:700}
 .cart-controls .remove{background:#ffe8e5;color:#b42318}
 .total-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-top:2px dashed #f1d6c8;margin-top:12px;padding-top:18px;font-size:clamp(20px,4vw,26px);font-weight:800}
-#total,.green-price{color:var(--green-dark)}.discount-row{display:flex;justify-content:space-between;gap:12px;margin-top:12px;color:var(--muted);font-size:14px;font-weight:700}
+#total,.green-price{color:var(--green-dark)}
+.discount-row{display:flex;justify-content:space-between;gap:12px;margin-top:12px;color:var(--muted);font-size:14px;font-weight:700}
 .form-label{display:block;margin:22px 0 8px;font-size:14px;font-weight:700}
 textarea{display:block;width:100%;min-height:105px;padding:13px;border:1px solid #e4d8d1;border-radius:12px;background:#fffdfb;resize:vertical;outline-color:var(--orange)}
 .checkout{width:100%;margin-top:16px;padding:15px;border:0;border-radius:12px;background:#20b85a;color:#fff;font-weight:800;font-size:16px}
 .note{font-size:12px;color:var(--muted);line-height:1.7;margin:10px 0 0}
-footer{margin-top:28px;padding:32px 18px;background:#2b2420;color:#fff;text-align:center}.footer-brand{font-family:'Pacifico','Brush Script MT',cursive;color:#ffd166;font-size:27px;margin-bottom:8px}
+footer{margin-top:28px;padding:32px 18px;background:#2b2420;color:#fff;text-align:center}
+.footer-brand{font-family:'Pacifico','Brush Script MT',cursive;color:#ffd166;font-size:27px;margin-bottom:8px}
 footer p{margin:5px 0;color:#e9ded8;font-size:13px}
-@media(max-width:560px){header{padding:10px 14px;gap:8px;flex-wrap:wrap}.brand{font-size:27px}nav{gap:13px}nav a{font-size:12px}.hero{min-height:310px;background-position:center}.promo-strip{grid-template-columns:1fr;gap:9px;margin-top:14px}.promo{padding:12px 14px}.container{padding:35px 0}.menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.image-wrap{height:145px}.info{padding:12px}.info h3{font-size:13px;min-height:58px}.harga{font-size:17px}.qty{gap:10px}.qty button{width:33px;height:33px}.btn{font-size:12px;padding:11px 7px}}
+@media(max-width:560px){
+ header{padding:10px 14px;gap:8px;flex-wrap:wrap}
+ .brand{font-size:27px}
+ nav{gap:13px}
+ nav a{font-size:12px}
+ .hero{min-height:310px;background-position:center}
+ .promo-strip{grid-template-columns:1fr;gap:9px;margin-top:14px}
+ .promo{padding:12px 14px}
+ .container{padding:35px 0}
+ .menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .image-wrap{height:145px}
+ .info{padding:12px}
+ .info h3{font-size:13px;min-height:58px}
+ .harga{font-size:17px}
+ .qty{gap:10px}
+ .qty button{width:33px;height:33px}
+ .btn{font-size:12px;padding:11px 7px}
+}
 @media(max-width:360px){.menu{grid-template-columns:1fr}.image-wrap{height:190px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
@@ -111,23 +109,32 @@ footer p{margin:5px 0;color:#e9ded8;font-size:13px}
   <a class="brand" href="#" aria-label="Viana Food beranda">🍔 Viana Food</a>
   <nav aria-label="Navigasi utama"><a href="#">Home</a><a href="#menu">Menu</a><a href="#kontak">Kontak</a></nav>
 </header>
+
 <section class="hero">
-  <div class="hero-content"><span class="eyebrow">Fresh • Lezat • Praktis</span>
+  <div class="hero-content">
+    <span class="eyebrow">Fresh • Lezat • Praktis</span>
     <h1>Selamat datang di <span>Viana Food!</span></h1>
-    <p>Pilih Risol favoritmu,  dan pilih variannya. Maksimal pembelian 4 pcs untuk harga paket .</p>
+    <p>Pilih Risol favoritmu, dan pilih variannya. Maksimal pembelian 4 pcs untuk harga paket.</p>
     <a class="primary-link" href="#menu">Lihat Menu &nbsp; ↓</a>
   </div>
 </section>
-<section class="promo-strip" class=""aria-label="Keunggulan Viana Food">
+
+<section class="promo-strip" aria-label="Keunggulan Viana Food">
   <div class="promo"><div class="promo-icon" aria-hidden="true">🥟</div><div><strong>Paket Risol Hemat</strong><span>4 pcs bisa campur varian Rp15.000.</span></div></div>
   <div class="promo"><div class="promo-icon" aria-hidden="true">💬</div><div><strong>Pesan via WhatsApp</strong><span>Periksa pesanan sebelum mengirim.</span></div></div>
   <div class="promo"><div class="promo-icon" aria-hidden="true">🧡</div><div><strong>Pilih Varian Favorit</strong><span>Bebas menggabungkan rasa.</span></div></div>
   <div class="promo"><div class="promo-icon" aria-hidden="true">🛵</div><div><strong>FREE PENGANTARAN</strong><span>Pesanan diantar ke alamatmu.</span></div></div>
 </section>
+
 <main class="container" id="menu">
-  <div class="section-head"><div class="small-title">Pilihan untukmu</div><h2>Menu Risol Favorit</h2><p>Pilih jumlah setiap varian, lalu tambahkan ke keranjang.</p></div>
-  <div class="price-guide"><strong>Harga satuan Rp4.000 / pcs </strong><br>Setiap pembelian 4 pcs risol (bisa mix) campur varian Harga <strong>Rp15.000</strong>.Berlaku untuk kelipatan .</div>
+  <div class="section-head">
+    <div class="small-title">Pilihan untukmu</div>
+    <h2>Menu Risol Favorit</h2>
+    <p>Pilih jumlah setiap varian, lalu tambahkan ke keranjang.</p>
+  </div>
+  <div class="price-guide"><strong>Harga satuan Rp4.000 / pcs</strong><br>Setiap pembelian 4 pcs risol (bisa mix) campur varian harga <strong>Rp15.000</strong>. Berlaku untuk kelipatan.</div>
   <div class="menu" id="daftar-menu"></div>
+
   <section class="cart-panel" aria-labelledby="cart-title">
     <h2 id="cart-title">🛒 Keranjang Belanja</h2>
     <p class="cart-intro">Paket dihitung dari total semua varian risol di keranjang, jadi kamu boleh mencampur rasa.</p>
@@ -136,79 +143,189 @@ footer p{margin:5px 0;color:#e9ded8;font-size:13px}
     <div class="total-row"><span>Total</span><span id="total">Rp0</span></div>
     <label class="form-label" for="catatan">Catatan dan lokasi pengantaran</label>
     <textarea id="catatan" placeholder="Contoh: alamat lengkap, patokan rumah, atau catatan pesanan..."></textarea>
-    <button class="checkout" type="button" onclick="checkout()">Pesan via WhatsApp</button>
+    <button class="checkout" type="button" id="checkout-button">Pesan via WhatsApp</button>
     <p class="note">Pesanan akan dibuka di WhatsApp untuk kamu periksa dan kirim sebelum dikirim ke Viana Food.</p>
   </section>
 </main>
-<footer id="kontak"><div class="footer-brand">Viana Food</div><p>Terima kasih sudah memilih Viana Food ❤️</p><p>Lezat di setiap gigitan.</p></footer>
+
+<footer id="kontak">
+  <div class="footer-brand">Viana Food</div>
+  <p>Terima kasih sudah memilih Viana Food ❤️</p>
+  <p>Lezat di setiap gigitan.</p>
+</footer>
+
 <script>
 'use strict';
-const nomorWA = '62881011268398'; // Nomor WhatsApp Viana Food
+
+const nomorWA = '62881011268398';
 const HARGA_SATUAN = 4000;
 const ISI_PAKET = 4;
 const HARGA_PAKET = 15000;
 
-// Silakan ubah nama dan URL gambar sesuai 6 varian risol milikmu.
 const produk = [
- {id:'ori', nama:'Risole Mayo Ori (Sosis + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/riso_mayo_original_full_1536x1536.png'},
- {id:'crab', nama:'Risol Mayo Pedas (Crab Stick + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Crab.png'},
- {id:'beef', nama:'Risol Beef Mayo (Smoked Beef + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Beef.png'},
- {id:'ayamPedas', nama:'Risol Ayam Suwir Pedas', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Ayamswirpedas.png'},
- {id:'ayamMayo', nama:'Risol Ayam Suwir Mayo', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Ayamswir.png'},
- {id:'sosisPedas', nama:'Risol Sosis + Telur Mayo Pedas', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Sosispedas.png'}
+  {id:'ori', nama:'Risole Mayo Ori (Sosis + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/riso_mayo_original_full_1536x1536.png'},
+  {id:'crab', nama:'Risol Mayo Pedas (Crab Stick + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Crab.png'},
+  {id:'beef', nama:'Risol Beef Mayo (Smoked Beef + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Beef.png'},
+  {id:'ayamPedas', nama:'Risol Ayam Suwir Pedas', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Ayamswirpedas.png'},
+  {id:'ayamMayo', nama:'Risol Ayam Suwir Mayo', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Ayamswir.png'},
+  {id:'sosisPedas', nama:'Risol Sosis + Telur Mayo Pedas', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Sosispedas.png'}
 ];
+
 const keranjang = {};
-const pilihan = Object.fromEntries(produk.map(p=>[p.id,0]));
-function rupiah(angka){return 'Rp'+new Intl.NumberFormat('id-ID',{maximumFractionDigits:0}).format(angka);}
-function escapeHTML(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function gambarFallback(img){
- img.addEventListener('error',()=>{img.classList.add('image-failed');img.alt='Foto menu belum dapat dimuat';img.src='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300"><rect width="480" height="300" fill="#fff1e8"/><text x="240" y="145" font-size="65" text-anchor="middle">🥟</text><text x="240" y="205" font-family="Arial" font-size="20" fill="#8a5b45" text-anchor="middle">Viana Food</text></svg>');img.onerror=null;},{once:true});
+const pilihan = Object.fromEntries(produk.map(p => [p.id, 0]));
+
+function rupiah(angka) {
+  return 'Rp' + new Intl.NumberFormat('id-ID', {maximumFractionDigits:0}).format(angka);
 }
-function buatMenu(){
- document.getElementById('daftar-menu').innerHTML=produk.map(p=>`
- <article class="card"><div class="image-wrap"><img class="${p.id==='ori'?'mayo-img':''}" src="${escapeHTML(p.gambar)}" alt="${escapeHTML(p.nama)}" loading="lazy" decoding="async"></div>
- <div class="info"><h3>${escapeHTML(p.nama)}</h3><div class="harga">${rupiah(HARGA_SATUAN)} <span style="font-size:12px">/Pcs</span></div><div class="harga-keterangan">Paket pembelian 4 pcs Rp15.000</div>
- <div class="qty"><button type="button" aria-label="Kurangi ${escapeHTML(p.nama)}" onclick="ubahPilihan('${p.id}',-1)">−</button><span id="pilih-${p.id}">0</span><button type="button" aria-label="Tambah ${escapeHTML(p.nama)}" onclick="ubahPilihan('${p.id}',1)">+</button></div>
- <button class="btn" type="button" onclick="pesan('${p.id}')">Tambah ke Keranjang</button></div></article>`).join('');
- document.querySelectorAll('.card img').forEach(gambarFallback);
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, c => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[c]));
 }
-function ubahPilihan(id,delta){pilihan[id]=Math.max(0,(pilihan[id]||0)+delta);document.getElementById('pilih-'+id).textContent=String(pilihan[id]);}
-function pesan(id){
- const p=produk.find(x=>x.id===id);const jumlah=pilihan[id]||0;
- if(jumlah<1){alert('Silakan pilih jumlah risol terlebih dahulu dengan tombol +.');return;}
- if(!keranjang[id])keranjang[id]={nama:p.nama,jumlah:0};
- keranjang[id].jumlah+=jumlah;pilihan[id]=0;document.getElementById('pilih-'+id).textContent='0';tampilkanKeranjang();
+
+function gambarFallback(img) {
+  img.addEventListener('error', function() {
+    if (img.dataset.fallbackApplied === 'true') return;
+    img.dataset.fallbackApplied = 'true';
+    img.classList.add('image-failed');
+    img.alt = 'Foto menu belum dapat dimuat';
+    img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300"><rect width="480" height="300" fill="#fff1e8"/><text x="240" y="145" font-size="65" text-anchor="middle">🥟</text><text x="240" y="205" font-family="Arial" font-size="20" fill="#8a5b45" text-anchor="middle">Viana Food</text></svg>'
+    );
+  }, {once:true});
 }
-function ubahJumlah(id,delta){if(!keranjang[id])return;keranjang[id].jumlah+=delta;if(keranjang[id].jumlah<=0)delete keranjang[id];tampilkanKeranjang();}
-function hapusItem(id){delete keranjang[id];tampilkanKeranjang();}
-function hitung(){
- const jumlah=Object.values(keranjang).reduce((s,x)=>s+x.jumlah,0);
- const paket=Math.floor(jumlah/ISI_PAKET);
- const sisa=jumlah%ISI_PAKET;
- const total=paket*HARGA_PAKET+sisa*HARGA_SATUAN;
- const normal=jumlah*HARGA_SATUAN;
- return {jumlah,paket,sisa,total,normal,hemat:normal-total};
+
+function buatMenu() {
+  document.getElementById('daftar-menu').innerHTML = produk.map((p, index) => `
+    <article class="card">
+      <div class="image-wrap">
+        <img class="${p.id === 'ori' ? 'mayo-img' : ''}"
+             src="${escapeHTML(p.gambar)}"
+             alt="${escapeHTML(p.nama)}"
+             loading="${index === 0 ? 'eager' : 'lazy'}"
+             fetchpriority="${index === 0 ? 'high' : 'auto'}"
+             decoding="async">
+      </div>
+      <div class="info">
+        <h3>${escapeHTML(p.nama)}</h3>
+        <div class="harga">${rupiah(HARGA_SATUAN)} <span style="font-size:12px">/Pcs</span></div>
+        <div class="harga-keterangan">Paket pembelian 4 pcs Rp15.000</div>
+        <div class="qty">
+          <button type="button" aria-label="Kurangi ${escapeHTML(p.nama)}" data-id="${p.id}" data-delta="-1">−</button>
+          <span id="pilih-${p.id}">0</span>
+          <button type="button" aria-label="Tambah ${escapeHTML(p.nama)}" data-id="${p.id}" data-delta="1">+</button>
+        </div>
+        <button class="btn" type="button" data-pesan="${p.id}">Tambah ke Keranjang</button>
+      </div>
+    </article>
+  `).join('');
+
+  document.querySelectorAll('.card img').forEach(gambarFallback);
+  document.querySelectorAll('[data-delta]').forEach(button => {
+    button.addEventListener('click', () => ubahPilihan(button.dataset.id, Number(button.dataset.delta)));
+  });
+  document.querySelectorAll('[data-pesan]').forEach(button => {
+    button.addEventListener('click', () => pesan(button.dataset.pesan));
+  });
 }
-function tampilkanKeranjang(){
- const area=document.getElementById('keranjang');const items=Object.entries(keranjang);
- if(!items.length)area.innerHTML='<p class="empty">Belum ada pesanan. Silakan pilih menu favoritmu.</p>';
- else area.innerHTML=items.map(([id,item])=>`
- <div class="cart-item"><div class="cart-top"><span class="cart-name">${escapeHTML(item.nama)}</span><span class="cart-subtotal">${item.jumlah} buah</span></div>
- <div class="cart-controls"><button type="button" aria-label="Kurangi ${escapeHTML(item.nama)}" onclick="ubahJumlah('${id}',-1)">−</button><span>${item.jumlah} buah</span><button type="button" aria-label="Tambah ${escapeHTML(item.nama)}" onclick="ubahJumlah('${id}',1)">+</button><button class="remove" type="button" onclick="hapusItem('${id}')">Hapus</button></div></div>`).join('');
- const h=hitung();
- document.getElementById('hemat').textContent=rupiah(h.hemat);
- document.getElementById('total').textContent=rupiah(h.total);
+
+function ubahPilihan(id, delta) {
+  pilihan[id] = Math.max(0, (pilihan[id] || 0) + delta);
+  document.getElementById('pilih-' + id).textContent = String(pilihan[id]);
 }
-function checkout(){
- const items=Object.values(keranjang);if(!items.length){alert('Keranjang masih kosong. Pilih menu terlebih dahulu.');return;}
- const h=hitung();const catatan=document.getElementById('catatan').value.trim();
- let teks='Halo Viana Food\n\nSaya ingin memesan:\n\n';
- items.forEach((item,i)=>{teks+=`${i+1}. ${item.nama} x${item.jumlah} buah\n`;});
- teks+=`\nTotal pembayaran: ${rupiah(h.total)}\n`;
- teks+=`Catatan: ${catatan||'(belum diisi)'}`;
- window.location.href=`https://wa.me/${nomorWA}?text=${encodeURIComponent(teks)}`;
+
+function pesan(id) {
+  const p = produk.find(x => x.id === id);
+  const jumlah = pilihan[id] || 0;
+  if (jumlah < 1) {
+    alert('Silakan pilih jumlah risol terlebih dahulu dengan tombol +.');
+    return;
+  }
+  if (!keranjang[id]) keranjang[id] = {nama:p.nama, jumlah:0};
+  keranjang[id].jumlah += jumlah;
+  pilihan[id] = 0;
+  document.getElementById('pilih-' + id).textContent = '0';
+  tampilkanKeranjang();
 }
-buatMenu();tampilkanKeranjang();
+
+function ubahJumlah(id, delta) {
+  if (!keranjang[id]) return;
+  keranjang[id].jumlah += delta;
+  if (keranjang[id].jumlah <= 0) delete keranjang[id];
+  tampilkanKeranjang();
+}
+
+function hapusItem(id) {
+  delete keranjang[id];
+  tampilkanKeranjang();
+}
+
+function hitung() {
+  const jumlah = Object.values(keranjang).reduce((s, x) => s + x.jumlah, 0);
+  const paket = Math.floor(jumlah / ISI_PAKET);
+  const sisa = jumlah % ISI_PAKET;
+  const total = paket * HARGA_PAKET + sisa * HARGA_SATUAN;
+  const normal = jumlah * HARGA_SATUAN;
+  return {jumlah, paket, sisa, total, normal, hemat:normal-total};
+}
+
+function tampilkanKeranjang() {
+  const area = document.getElementById('keranjang');
+  const items = Object.entries(keranjang);
+
+  if (!items.length) {
+    area.innerHTML = '<p class="empty">Belum ada pesanan. Silakan pilih menu favoritmu.</p>';
+  } else {
+    area.innerHTML = items.map(([id, item]) => `
+      <div class="cart-item">
+        <div class="cart-top">
+          <span class="cart-name">${escapeHTML(item.nama)}</span>
+          <span class="cart-subtotal">${item.jumlah} buah</span>
+        </div>
+        <div class="cart-controls">
+          <button type="button" aria-label="Kurangi ${escapeHTML(item.nama)}" data-cart-id="${id}" data-cart-delta="-1">−</button>
+          <span>${item.jumlah} buah</span>
+          <button type="button" aria-label="Tambah ${escapeHTML(item.nama)}" data-cart-id="${id}" data-cart-delta="1">+</button>
+          <button class="remove" type="button" data-hapus="${id}">Hapus</button>
+        </div>
+      </div>
+    `).join('');
+
+    area.querySelectorAll('[data-cart-delta]').forEach(button => {
+      button.addEventListener('click', () => ubahJumlah(button.dataset.cartId, Number(button.dataset.cartDelta)));
+    });
+    area.querySelectorAll('[data-hapus]').forEach(button => {
+      button.addEventListener('click', () => hapusItem(button.dataset.hapus));
+    });
+  }
+
+  const h = hitung();
+  document.getElementById('hemat').textContent = rupiah(h.hemat);
+  document.getElementById('total').textContent = rupiah(h.total);
+}
+
+function checkout() {
+  const items = Object.values(keranjang);
+  if (!items.length) {
+    alert('Keranjang masih kosong. Pilih menu terlebih dahulu.');
+    return;
+  }
+
+  const h = hitung();
+  const catatan = document.getElementById('catatan').value.trim();
+  let teks = 'Halo Viana Food\n\nSaya ingin memesan:\n\n';
+  items.forEach((item, i) => {
+    teks += `${i + 1}. ${item.nama} x${item.jumlah} buah\n`;
+  });
+  teks += `\nTotal pembayaran: ${rupiah(h.total)}\n`;
+  teks += `Catatan: ${catatan || '(belum diisi)'}`;
+  window.location.href = `https://wa.me/${nomorWA}?text=${encodeURIComponent(teks)}`;
+}
+
+document.getElementById('checkout-button').addEventListener('click', checkout);
+buatMenu();
+tampilkanKeranjang();
 </script>
 </body>
 </html>
