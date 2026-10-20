@@ -3,626 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viana Food</title>
-
+<meta name="theme-color" content="#f45b32">
+<meta name="description" content="Viana Food — pesan risol favorit dengan mudah.">
+<title>Viana Food | Pesan Risol Favorit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+:root{--orange:#f45b32;--orange-dark:#d94320;--yellow:#ffd166;--green:#159447;--green-dark:#08752f;--ink:#292522;--muted:#756d68;--cream:#fff8f2;--white:#fff;--shadow:0 12px 32px rgba(69,43,27,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:var(--ink);background:var(--cream);font-family:'Poppins',Arial,sans-serif}
+button,input,textarea{font:inherit}button{touch-action:manipulation;cursor:pointer}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(16px,4vw,48px);background:#FFE58A;border-bottom:1px solid rgba(112,68,20,.16);box-shadow:0 4px 18px rgba(112,68,20,.10)}
+.brand{color:var(--orange);text-decoration:none;font-family:'Pacifico','Brush Script MT',cursive;font-size:clamp(25px,4vw,37px);line-height:1.3;white-space:nowrap;text-shadow:1px 2px 0 rgba(255,255,255,.65)}
+nav{display:flex;align-items:center;gap:clamp(10px,2vw,24px)}nav a{color:#593016;text-decoration:none;font-size:14px;font-weight:700}
+.hero{min-height:330px;display:flex;align-items:center;padding:clamp(32px,7vw,76px) clamp(18px,7vw,90px);color:white;background:linear-gradient(90deg,rgba(39,20,11,.82),rgba(39,20,11,.35)),url("https://raw.githubusercontent.com/websiteku-id/Foodsviana/main/Poster.png") center/cover no-repeat,linear-gradient(135deg,#f45b32,#ffb15e)}
+.hero-content{max-width:650px}.eyebrow{display:inline-block;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.3);font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.13;margin:17px 0 12px}.hero h1 span{color:var(--yellow)}.hero p{font-size:clamp(14px,2vw,18px);line-height:1.8;margin:0 0 24px;max-width:520px}
+.primary-link{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:12px;background:var(--yellow);color:#35251a;text-decoration:none;font-weight:800}
+.promo-strip{width:min(1120px,92%);margin:22px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.promo{display:flex;align-items:center;gap:12px;padding:15px 16px;background:#fff;border:1px solid #f5dfd2;border-radius:15px;box-shadow:0 7px 20px rgba(69,43,27,.06)}
+.promo-icon{flex:0 0 43px;width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#fff0e8;font-size:23px}
+.promo strong{display:block;font-size:13px;line-height:1.45}.promo span{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:3px}
+.container{width:min(1120px,92%);margin:0 auto;padding:48px 0}.section-head{text-align:center;margin-bottom:28px}.small-title{color:var(--orange);font-weight:800;letter-spacing:2px;font-size:12px;text-transform:uppercase}
+.section-head h2{font-size:clamp(26px,4vw,36px);margin:8px 0}.section-head p{margin:0;color:var(--muted);font-size:14px}
+.price-guide{max-width:720px;margin:0 auto 25px;background:#eaf8ee;border:1px solid #b9e5c5;border-radius:14px;padding:14px 16px;text-align:center;color:#185c2c;font-size:14px;line-height:1.7}
+.price-guide strong{color:var(--green-dark)}.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:22px}
+.card{min-width:0;background:var(--white);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(75,43,25,.06);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(69,43,27,.14)}.image-wrap{height:190px;display:flex;align-items:center;justify-content:center;background:#fff1e8;overflow:hidden}
+.card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
 }
 
-body{
-background:#f4f4f4;
+.card img.mayo-img {
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+  padding: 0;
 }
-
-header{
-background:#ff5722;
-color:#fff;
-padding:18px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:100;
-}
-
-header h1{
-font-size:28px;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:18px;
-font-weight:bold;
-}
-
-.hero{
-height:300px;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
-background-size:cover;
-background-position:center;
-color:white;
-}
-
-.hero h2{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:20px;
-}
-
-.hero button{
-padding:12px 30px;
-background:#ffc107;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-}
-
-.container{
-width:92%;
-margin:auto;
-padding:30px 0;
-}
-
-.judul{
-text-align:center;
-font-size:32px;
-margin-bottom:30px;
-}
-
-.menu{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+}.card img.image-failed{object-fit:contain;padding:25px;background:#fff1e8}.image-wrap{
+  height:190px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff1e8;
+  overflow:hidden;
 }
 
 .card img{
-width:100%;
-height:180px;
-object-fit:cover;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
 }
 
-.info{
-padding:15px;
+.card img.mayo-img{
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+  padding:0;
 }
 
-.info h3{
-margin-bottom:10px;
+.card img.image-failed{
+  object-fit:contain;
+  padding:25px;
+  background:#fff1e8;
 }
-
-.harga{
-color:#ff5722;
-font-size:22px;
-font-weight:bold;
-margin-bottom:15px;
-}
-
-.qty{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-margin-bottom:15px;
-}
-
-.qty button{
-width:35px;
-height:35px;
-border:none;
-border-radius:50%;
-font-size:20px;
-background:#ff5722;
-color:white;
-cursor:pointer;
-}
-
-.qty span{
-font-size:20px;
-font-weight:bold;
-width:40px;
-text-align:center;
-}
-
-.btn{
-width:100%;
-padding:12px;
-background:#28a745;
-border:none;
-color:white;
-border-radius:8px;
-font-size:17px;
-cursor:pointer;
-}
+.info{padding:17px}.info h3{font-size:16px;line-height:1.5;min-height:48px;margin:0 0 9px}
+.harga{color:#000;font-size:21px;font-weight:800;margin-bottom:5px}
+.harga-keterangan{font-size:11px;color:var(--muted);margin-bottom:13px;min-height:17px}
+.qty{display:flex;justify-content:center;align-items:center;gap:16px;margin:0 0 15px}
+.qty button{width:38px;height:38px;border:0;border-radius:50%;background:var(--orange);color:#fff;font-size:22px;font-weight:700}
+.qty button:hover{background:var(--orange-dark)}.qty span{font-size:18px;font-weight:800;min-width:24px;text-align:center}
+.btn{width:100%;padding:12px;border:0;border-radius:10px;background:var(--green);color:white;font-size:14px;font-weight:700}.btn:hover,.checkout:hover{filter:brightness(.95)}
+.cart-panel{margin-top:48px;padding:clamp(18px,4vw,28px);background:#fff;border-radius:18px;box-shadow:var(--shadow)}
+.cart-panel h2{margin:0 0 8px;font-size:24px}.cart-intro{margin:0 0 12px;color:var(--muted);font-size:12px;line-height:1.6}
+.empty{padding:16px 0;color:var(--muted);text-align:center}.cart-item{border-bottom:1px solid #eee;padding:15px 0}.cart-item:last-child{border-bottom:0}
+.cart-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.cart-name{font-weight:700}.cart-subtotal{font-weight:800;color:var(--ink);white-space:nowrap}
+.cart-controls{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}.cart-controls button{border:0;border-radius:8px;padding:7px 11px;background:#fff0e9;color:var(--orange-dark);font-weight:700}
+.cart-controls .remove{background:#ffe8e5;color:#b42318}
+.total-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-top:2px dashed #f1d6c8;margin-top:12px;padding-top:18px;font-size:clamp(20px,4vw,26px);font-weight:800}
+#total,.green-price{color:var(--green-dark)}.discount-row{display:flex;justify-content:space-between;gap:12px;margin-top:12px;color:var(--muted);font-size:14px;font-weight:700}
+.form-label{display:block;margin:22px 0 8px;font-size:14px;font-weight:700}
+textarea{display:block;width:100%;min-height:105px;padding:13px;border:1px solid #e4d8d1;border-radius:12px;background:#fffdfb;resize:vertical;outline-color:var(--orange)}
+.checkout{width:100%;margin-top:16px;padding:15px;border:0;border-radius:12px;background:#20b85a;color:#fff;font-weight:800;font-size:16px}
+.note{font-size:12px;color:var(--muted);line-height:1.7;margin:10px 0 0}
+footer{margin-top:28px;padding:32px 18px;background:#2b2420;color:#fff;text-align:center}.footer-brand{font-family:'Pacifico','Brush Script MT',cursive;color:#ffd166;font-size:27px;margin-bottom:8px}
+footer p{margin:5px 0;color:#e9ded8;font-size:13px}
+@media(max-width:560px){header{padding:10px 14px;gap:8px;flex-wrap:wrap}.brand{font-size:27px}nav{gap:13px}nav a{font-size:12px}.hero{min-height:310px;background-position:center}.promo-strip{grid-template-columns:1fr;gap:9px;margin-top:14px}.promo{padding:12px 14px}.container{padding:35px 0}.menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.image-wrap{height:145px}.info{padding:12px}.info h3{font-size:13px;min-height:58px}.harga{font-size:17px}.qty{gap:10px}.qty button{width:33px;height:33px}.btn{font-size:12px;padding:11px 7px}}
+@media(max-width:360px){.menu{grid-template-columns:1fr}.image-wrap{height:190px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
 </head>
-
 <body>
-
 <header>
-
-<h1>🍔 Viana Food</h1>
-
-<nav>
-<a href="#">Home</a>
-<a href="#menu">Menu</a>
-<a href="#kontak">Kontak</a>
-</nav>
-
+  <a class="brand" href="#" aria-label="Viana Food beranda">🍔 Viana Food</a>
+  <nav aria-label="Navigasi utama"><a href="#">Home</a><a href="#menu">Menu</a><a href="#kontak">Kontak</a></nav>
 </header>
-
 <section class="hero">
-
-<div>
-
-<h2>Selamat Datang</h2>
-
-<p>Pesan makanan favoritmu dengan mudah.</p>
-
-<button>LiHAT MENU</button>
-
-</div>
-
+  <div class="hero-content"><span class="eyebrow">Fresh • Lezat • Praktis</span>
+    <h1>Selamat datang di <span>Viana Food!</span></h1>
+    <p>Pilih Risol favoritmu,  dan pilih variannya. Maksimal pembelian 4 pcs untuk harga paket .</p>
+    <a class="primary-link" href="#menu">Lihat Menu &nbsp; ↓</a>
+  </div>
 </section>
-
-<div class="container" id="menu">
-
-<h2 class="judul">Menu Makanan</h2>
-
-<div class="menu">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
-
-<div class="info">
-
-<h3>Nasi Goreng</h3>
-
-<div class="harga">Rp20.000</div>
-
-<div class="qty">
-
-<button onclick="kurang('nasgor')">-</button>
-
-<span id="nasgor">0</span>
-
-<button onclick="tambah('nasgor')">+</button>
-
-</div>
-
-<button class="btn" onclick="pesan('Nasi Goreng',20000,'nasgor')">
-Tambah ke Keranjang
-</button>
-
-</div>
-
-</div>
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
-
-<div class="info">
-
-<h3>Burger</h3>
-
-<div class="harga">Rp25.000</div>
-
-<div class="qty">
-
-<button onclick="kurang('burger')">-</button>
-
-<span id="burger">0</span>
-
-<button onclick="tambah('burger')">+</button>
-
-</div>
-
-<button class="btn" onclick="pesan('Burger',25000,'burger')">
-Tambah ke Keranjang
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624">
-
-<div class="info">
-
-<h3>Ayam Geprek</h3>
-
-<div class="harga">Rp22.000</div>
-
-<div class="qty">
-
-<button onclick="kurang('geprek')">-</button>
-
-<span id="geprek">0</span>
-
-<button onclick="tambah('geprek')">+</button>
-
-</div>
-
-<button class="btn" onclick="pesan('Ayam Geprek',22000,'geprek')">
-Tambah ke Keranjang
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb">
-
-<div class="info">
-
-<h3>Mie Ayam</h3>
-
-<div class="harga">Rp18.000</div>
-
-<div class="qty">
-
-<button onclick="kurang('mie')">-</button>
-
-<span id="mie">0</span>
-
-<button onclick="tambah('mie')">+</button>
-
-</div>
-
-<button class="btn" onclick="pesan('Mie Ayam',18000,'mie')">
-Tambah ke Keranjang
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd">
-
-<div class="info">
-
-<h3>Pizza</h3>
-
-<div class="harga">Rp55.000</div>
-
-<div class="qty">
-
-<button onclick="kurang('pizza')">-</button>
-
-<span id="pizza">0</span>
-
-<button onclick="tambah('pizza')">+</button>
-
-</div>
-
-<button class="btn" onclick="pesan('Pizza',55000,'pizza')">
-Tambah ke Keranjang
-</button>
-
-</div>
-
-</div>
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e">
-
-<div class="info">
-
-<h3>Es Teh Manis</h3>
-
-<div class="harga">Rp5.000</div>
-
-<div class="qty">
-
-<button onclick="kurang('esteh')">-</button>
-
-<span id="esteh">0</span>
-
-<button onclick="tambah('esteh')">+</button>
-
-</div>
-
-<button class="btn" onclick="pesan('Es Teh Manis',5000,'esteh')">
-Tambah ke Keranjang
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1544145945-f90425340c7e">
-
-<div class="info">
-
-<h3>Jus Jeruk</h3>
-
-<div class="harga">Rp10.000</div>
-
-<div class="qty">
-
-<button onclick="kurang('jus')">-</button>
-
-<span id="jus">0</span>
-
-<button onclick="tambah('jus')">+</button>
-
-</div>
-
-<button class="btn" onclick="pesan('Jus Jeruk',10000,'jus')">
-Tambah ke Keranjang
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<h2 style="margin-top:40px;">🛒 Keranjang Belanja</h2>
-
-<div id="keranjang" style="
-background:#fff;
-padding:20px;
-margin-top:15px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-">
-
-<p>Belum ada pesanan.</p>
-
-</div>
-
-<h2 id="total" style="margin-top:20px;color:#ff5722;">
-Total : Rp0
-</h2>
-
-<h3 style="margin-top:25px;">Catatan Pesanan dan tambah lokasi pengantaran</h3>
-
-<textarea id="catatan"
-placeholder="Contoh: gang kemndoran "
-style="
-width:100%;
-height:100px;
-margin-top:10px;
-padding:10px;
-border-radius:8px;
-border:1px solid #ccc;
-resize:none;
-"></textarea>
-
-<button onclick="checkout()"
-style="
-margin-top:20px;
-width:100%;
-padding:15px;
-font-size:18px;
-background:#25D366;
-color:white;
-border:none;
-border-radius:10px;
-cursor:pointer;">
-Checkout via WhatsApp
-</button>
-
-</div>
-
-<footer id="kontak" style="
-margin-top:50px;
-background:#222;
-color:white;
-text-align:center;
-padding:20px;">
-<h3>Donn Food</h3>
-<p>Terima kasih telah berbelanja.</p>
-</footer>
+<section class="promo-strip" class=""aria-label="Keunggulan Viana Food">
+  <div class="promo"><div class="promo-icon" aria-hidden="true">🥟</div><div><strong>Paket Risol Hemat</strong><span>4 pcs bisa campur varian Rp15.000.</span></div></div>
+  <div class="promo"><div class="promo-icon" aria-hidden="true">💬</div><div><strong>Pesan via WhatsApp</strong><span>Periksa pesanan sebelum mengirim.</span></div></div>
+  <div class="promo"><div class="promo-icon" aria-hidden="true">🧡</div><div><strong>Pilih Varian Favorit</strong><span>Bebas menggabungkan rasa.</span></div></div>
+  <div class="promo"><div class="promo-icon" aria-hidden="true">🛵</div><div><strong>FREE PENGANTARAN</strong><span>Pesanan diantar ke alamatmu.</span></div></div>
+</section>
+<main class="container" id="menu">
+  <div class="section-head"><div class="small-title">Pilihan untukmu</div><h2>Menu Risol Favorit</h2><p>Pilih jumlah setiap varian, lalu tambahkan ke keranjang.</p></div>
+  <div class="price-guide"><strong>Harga satuan Rp4.000 / pcs </strong><br>Setiap pembelian 4 pcs risol (bisa mix) campur varian Harga <strong>Rp15.000</strong>.Berlaku untuk kelipatan .</div>
+  <div class="menu" id="daftar-menu"></div>
+  <section class="cart-panel" aria-labelledby="cart-title">
+    <h2 id="cart-title">🛒 Keranjang Belanja</h2>
+    <p class="cart-intro">Paket dihitung dari total semua varian risol di keranjang, jadi kamu boleh mencampur rasa.</p>
+    <div id="keranjang" aria-live="polite"><p class="empty">Belum ada pesanan. Silakan pilih menu favoritmu.</p></div>
+    <div class="discount-row"><span>Hemat dari harga satuan</span><span id="hemat">Rp0</span></div>
+    <div class="total-row"><span>Total</span><span id="total">Rp0</span></div>
+    <label class="form-label" for="catatan">Catatan dan lokasi pengantaran</label>
+    <textarea id="catatan" placeholder="Contoh: alamat lengkap, patokan rumah, atau catatan pesanan..."></textarea>
+    <button class="checkout" type="button" onclick="checkout()">Pesan via WhatsApp</button>
+    <p class="note">Pesanan akan dibuka di WhatsApp untuk kamu periksa dan kirim sebelum dikirim ke Viana Food.</p>
+  </section>
+</main>
+<footer id="kontak"><div class="footer-brand">Viana Food</div><p>Terima kasih sudah memilih Viana Food ❤️</p><p>Lezat di setiap gigitan.</p></footer>
 <script>
+'use strict';
+const nomorWA = '62881011268398'; // Nomor WhatsApp Viana Food
+const HARGA_SATUAN = 4000;
+const ISI_PAKET = 4;
+const HARGA_PAKET = 15000;
 
-let keranjang = [];
-let total = 0;
-
-const nomorWA = "62881011268398"; // Ganti dengan nomor WhatsApp Anda
-
-function rupiah(angka){
-    return "Rp" + angka.toLocaleString("id-ID");
+// Silakan ubah nama dan URL gambar sesuai 6 varian risol milikmu.
+const produk = [
+ {id:'ori', nama:'Risole Mayo Ori (Sosis + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/riso_mayo_original_full_1536x1536.png'},
+ {id:'crab', nama:'Risol Mayo Pedas (Crab Stick + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Crab.png'},
+ {id:'beef', nama:'Risol Beef Mayo (Smoked Beef + Telur)', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Beef.png'},
+ {id:'ayamPedas', nama:'Risol Ayam Suwir Pedas', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Ayamswirpedas.png'},
+ {id:'ayamMayo', nama:'Risol Ayam Suwir Mayo', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Ayamswir.png'},
+ {id:'sosisPedas', nama:'Risol Sosis + Telur Mayo Pedas', gambar:'https://raw.githubusercontent.com/websiteku-id/Foodsviana/refs/heads/main/Sosispedas.png'}
+];
+const keranjang = {};
+const pilihan = Object.fromEntries(produk.map(p=>[p.id,0]));
+function rupiah(angka){return 'Rp'+new Intl.NumberFormat('id-ID',{maximumFractionDigits:0}).format(angka);}
+function escapeHTML(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function gambarFallback(img){
+ img.addEventListener('error',()=>{img.classList.add('image-failed');img.alt='Foto menu belum dapat dimuat';img.src='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300"><rect width="480" height="300" fill="#fff1e8"/><text x="240" y="145" font-size="65" text-anchor="middle">🥟</text><text x="240" y="205" font-family="Arial" font-size="20" fill="#8a5b45" text-anchor="middle">Viana Food</text></svg>');img.onerror=null;},{once:true});
 }
-
-function tambah(id){
-    let el = document.getElementById(id);
-    let jumlah = parseInt(el.innerText);
-    jumlah++;
-    el.innerText = jumlah;
+function buatMenu(){
+ document.getElementById('daftar-menu').innerHTML=produk.map(p=>`
+ <article class="card"><div class="image-wrap"><img class="${p.id==='ori'?'mayo-img':''}" src="${escapeHTML(p.gambar)}" alt="${escapeHTML(p.nama)}" loading="lazy" decoding="async"></div>
+ <div class="info"><h3>${escapeHTML(p.nama)}</h3><div class="harga">${rupiah(HARGA_SATUAN)} <span style="font-size:12px">/Pcs</span></div><div class="harga-keterangan">Paket pembelian 4 pcs Rp15.000</div>
+ <div class="qty"><button type="button" aria-label="Kurangi ${escapeHTML(p.nama)}" onclick="ubahPilihan('${p.id}',-1)">−</button><span id="pilih-${p.id}">0</span><button type="button" aria-label="Tambah ${escapeHTML(p.nama)}" onclick="ubahPilihan('${p.id}',1)">+</button></div>
+ <button class="btn" type="button" onclick="pesan('${p.id}')">Tambah ke Keranjang</button></div></article>`).join('');
+ document.querySelectorAll('.card img').forEach(gambarFallback);
 }
-
-function kurang(id){
-    let el = document.getElementById(id);
-    let jumlah = parseInt(el.innerText);
-
-    if(jumlah > 0){
-        jumlah--;
-    }
-
-    el.innerText = jumlah;
+function ubahPilihan(id,delta){pilihan[id]=Math.max(0,(pilihan[id]||0)+delta);document.getElementById('pilih-'+id).textContent=String(pilihan[id]);}
+function pesan(id){
+ const p=produk.find(x=>x.id===id);const jumlah=pilihan[id]||0;
+ if(jumlah<1){alert('Silakan pilih jumlah risol terlebih dahulu dengan tombol +.');return;}
+ if(!keranjang[id])keranjang[id]={nama:p.nama,jumlah:0};
+ keranjang[id].jumlah+=jumlah;pilihan[id]=0;document.getElementById('pilih-'+id).textContent='0';tampilkanKeranjang();
 }
-
-function pesan(nama,harga,id){
-
-    let jumlah = parseInt(document.getElementById(id).innerText);
-
-    if(jumlah == 0){
-        alert("Silakan pilih jumlah terlebih dahulu.");
-        return;
-    }
-
-    keranjang.push({
-        nama:nama,
-        harga:harga,
-        jumlah:jumlah
-    });
-    document.getElementById(id).innerText = "0";
-
-    tampilkanKeranjang();
+function ubahJumlah(id,delta){if(!keranjang[id])return;keranjang[id].jumlah+=delta;if(keranjang[id].jumlah<=0)delete keranjang[id];tampilkanKeranjang();}
+function hapusItem(id){delete keranjang[id];tampilkanKeranjang();}
+function hitung(){
+ const jumlah=Object.values(keranjang).reduce((s,x)=>s+x.jumlah,0);
+ const paket=Math.floor(jumlah/ISI_PAKET);
+ const sisa=jumlah%ISI_PAKET;
+ const total=paket*HARGA_PAKET+sisa*HARGA_SATUAN;
+ const normal=jumlah*HARGA_SATUAN;
+ return {jumlah,paket,sisa,total,normal,hemat:normal-total};
 }
 function tampilkanKeranjang(){
-
-    let html = "";
-    total = 0;
-
-    if(keranjang.length == 0){
-        html = "<p>Belum ada pesanan.</p>";
-    }else{
-
-        keranjang.forEach((item,index)=>{
-
-            let subtotal = item.harga * item.jumlah;
-            total += subtotal;
-
-            html += `
-            <div style="border-bottom:1px solid #ddd;padding:15px 0;">
-
-                <b>${item.nama}</b>
-
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
-
-                    <div>
-
-                        <button onclick="kurangKeranjang(${index})">➖</button>
-
-                        <span style="margin:0 10px;">${item.jumlah}</span>
-
-                        <button onclick="tambahKeranjang(${index})">➕</button>
-
-                    </div>
-
-                    <b>${rupiah(subtotal)}</b>
-
-                </div>
-
-                <button onclick="hapusItem(${index})"
-                style="margin-top:10px;background:red;color:white;border:none;padding:8px 15px;border-radius:5px;">
-                ❌ Batal
-                </button>
-
-            </div>
-            `;
-
-        });
-
-    }
-
-    document.getElementById("keranjang").innerHTML = html;
-    document.getElementById("total").innerHTML = "Total : " + rupiah(total);
-
+ const area=document.getElementById('keranjang');const items=Object.entries(keranjang);
+ if(!items.length)area.innerHTML='<p class="empty">Belum ada pesanan. Silakan pilih menu favoritmu.</p>';
+ else area.innerHTML=items.map(([id,item])=>`
+ <div class="cart-item"><div class="cart-top"><span class="cart-name">${escapeHTML(item.nama)}</span><span class="cart-subtotal">${item.jumlah} buah</span></div>
+ <div class="cart-controls"><button type="button" aria-label="Kurangi ${escapeHTML(item.nama)}" onclick="ubahJumlah('${id}',-1)">−</button><span>${item.jumlah} buah</span><button type="button" aria-label="Tambah ${escapeHTML(item.nama)}" onclick="ubahJumlah('${id}',1)">+</button><button class="remove" type="button" onclick="hapusItem('${id}')">Hapus</button></div></div>`).join('');
+ const h=hitung();
+ document.getElementById('hemat').textContent=rupiah(h.hemat);
+ document.getElementById('total').textContent=rupiah(h.total);
 }
-function tambahKeranjang(index){
-    keranjang[index].jumlah++;
-    tampilkanKeranjang();
-}
-
-function kurangKeranjang(index){
-    keranjang[index].jumlah--;
-
-    if(keranjang[index].jumlah <= 0){
-        keranjang.splice(index,1);
-    }
-
-    tampilkanKeranjang();
-}
-function hapusItem(index){
-    keranjang.splice(index,1);
-    tampilkanKeranjang();
-}
-
 function checkout(){
-
-    if(keranjang.length == 0){
-        alert("Keranjang masih kosong!");
-        return;
-    }
-
-    let catatan = document.getElementById("catatan").value;
-
-    let pesanWA = "Hallo Viana Food..%0A%0ASaya ingin memesan:%0A%0A";
-
-    keranjang.forEach(function(item,index){
-
-        let subtotal = item.harga * item.jumlah;
-
-        pesanWA +=
-        (index+1)+". "+
-        item.nama+
-        " x"+item.jumlah+
-        " = "+
-        rupiah(subtotal)+
-        "%0A";
-
-    });
-
-    pesanWA += "%0A";
-    pesanWA += "Total : " + rupiah(total) + "%0A";
-
-    if(catatan != ""){
-        pesanWA += "Catatan : " + catatan + "%0A";
-    }
-
-    window.open(
-        "https://wa.me/"+nomorWA+"?text="+encodeURIComponent(decodeURIComponent(pesanWA)),
-        "_blank"
-    );
-
+ const items=Object.values(keranjang);if(!items.length){alert('Keranjang masih kosong. Pilih menu terlebih dahulu.');return;}
+ const h=hitung();const catatan=document.getElementById('catatan').value.trim();
+ let teks='Halo Viana Food\n\nSaya ingin memesan:\n\n';
+ items.forEach((item,i)=>{teks+=`${i+1}. ${item.nama} x${item.jumlah} buah\n`;});
+ teks+=`\nTotal pembayaran: ${rupiah(h.total)}\n`;
+ teks+=`Catatan: ${catatan||'(belum diisi)'}`;
+ window.location.href=`https://wa.me/${nomorWA}?text=${encodeURIComponent(teks)}`;
 }
-
-// Mengosongkan jumlah setelah halaman dimuat
-window.onload = function(){
-
-    const idMenu = [
-        "nasgor",
-        "burger",
-        "geprek",
-        "mie",
-        "pizza",
-        "esteh",
-        "jus"
-    ];
-
-    idMenu.forEach(function(id){
-        let el = document.getElementById(id);
-        if(el){
-            el.innerText = "0";
-        }
-    });
-
-};
-
+buatMenu();tampilkanKeranjang();
 </script>
-
 </body>
 </html>
